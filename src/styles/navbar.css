@@ -1,0 +1,105 @@
+/* ===== RESET (important) ===== */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+
+  background: #f8f9fb;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+  padding: 0 6%;
+  z-index: 999;
+}
+
+/* LOGO LEFT */
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+/* LINKS RIGHT */
+.nav-links {
+  margin-left: auto;          /* 🔥 MAIN FIX */
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+/* LINKS STYLE */
+.nav-links a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #111827;
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+/* RESUME SAME STYLE */
+.resume-link {
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #111827;
+  cursor: pointer;
+}
+
+.resume-link:hover {
+  color: #2563eb;
+}
+
+/* THEME BUTTON */
+.theme-btn {
+  margin-left: 18px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #2563eb;
+  background: none;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+/* ===== MOBILE ===== */
+.menu-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+    margin-left: auto;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background: #f8f9fb;
+    flex-direction: column;
+    padding: 20px 30px;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}

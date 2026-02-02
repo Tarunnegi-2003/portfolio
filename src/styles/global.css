@@ -1,0 +1,16 @@
+body {
+margin: 0;
+font-family: system-ui, sans-serif;
+}
+
+
+.light {
+background: #f8fafc;
+color: #1e293b;
+}
+
+
+.dark {
+background: #020617;
+color: #e5e7eb;
+}

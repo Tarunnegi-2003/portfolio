@@ -1,0 +1,81 @@
+.contact {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #edf4ff, #f8fbff);
+  padding: 120px 10%;
+  text-align: center;
+}
+
+/* TITLE */
+.contact-title {
+  font-size: 44px;
+  color: #0f172a;
+  margin-bottom: 60px;
+}
+
+/* GRID */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.contact-card {
+  background: white;
+  padding: 40px 20px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+/* HOVER GLOW (background reflection) */
+.contact-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: rgba(59, 130, 246, 0.12);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.contact-card:hover::before {
+  opacity: 1;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(59,130,246,0.25);
+}
+
+/* ICONS */
+.icon {
+  font-size: 58px;
+}
+
+/* ICON COLORS */
+.email { color: #ea4335; }
+.phone { color: #16a34a; }
+.github { color: #111827; }
+.linkedin { color: #0a66c2; }
+
+/* TEXT */
+.contact-card p {
+  font-size: 16px;
+  color: #334155;
+  z-index: 1;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact {
+    padding: 100px 6%;
+  }
+}
+

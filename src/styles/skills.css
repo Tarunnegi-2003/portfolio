@@ -1,0 +1,95 @@
+.skills {
+  min-height: 100vh;
+}
+/* ONE ROW */
+.skills-row {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+/* CARD */
+.skill-card {
+  min-width: 120px;
+  height: 140px;
+  background: #ffffff;
+  border-radius: 18px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  position: relative;
+  overflow: hidden;
+
+  /* 🔥 project-card jaisa effect */
+  transition: transform 0.3s ease;
+}
+
+/* ⬆️ HALKA UP ON HOVER */
+.skill-card:hover {
+  transform: translateY(-6px);
+}
+
+
+/* 🔥 HALKA BLUE REFLECTION (ONLY ON HOVER) */
+.skill-card::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(
+    circle,
+    rgba(149, 213, 241, 0.806),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-card:hover::after {
+  opacity: 1;
+}
+
+/* ICON (STABLE) */
+.skill-icon {
+  font-size: 68px;
+  z-index: 1;
+}
+
+/* NAME */
+.skill-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #020617;
+  z-index: 1;
+}
+
+/* 👇 SIMPLE LINE NICHE */
+.skill-line {
+  width: 26px;
+  height: 2px;
+  background: #cbd5e1;   /* light grey line */
+  border-radius: 2px;
+  z-index: 1;
+}
+
+
+
+/* ICON COLORS (IMPORTANT) */
+.skill-icon.html { color: #e34f26; }
+.skill-icon.css { color: #1572b6; }
+.skill-icon.js { color: #f7df1e; }
+.skill-icon.react { color: #61dafb; }
+.skill-icon.node { color: #339933; }
+.skill-icon.mongo { color: #47a248; }
+.skill-icon.git { color: #f05032; }
+
+.skills.reveal {
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}

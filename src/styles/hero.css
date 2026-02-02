@@ -1,0 +1,111 @@
+.hero {
+  min-height: 100vh;     /* 🔥 FULL SCREEN HEIGHT */
+  width: 100%;
+  background: #f8f9fb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* NAME */
+.hero-content h1 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.hero-content h1 span {
+  color: #2563eb;
+}
+
+/* SUB TEXT */
+.hero-content p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  margin-top: 35px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.hero-btn {
+  padding: 14px 32px;
+  background: #2563eb;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(37,99,235,0.35);
+}
+
+.hero-btn.outline {
+  background: transparent;
+  color: #2563eb;
+  border: 1px solid #2563eb;
+}
+
+.hero-btn.outline:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
+/* ENTRY ANIMATION */
+.hero-content {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroFadeUp 0.9s ease-out forwards;
+}
+
+.hero-content p {
+  opacity: 0;
+  animation: heroFadeUp 0.9s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.hero-buttons {
+  opacity: 0;
+  animation: heroFadeUp 0.9s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-content h1 {
+  animation: heroFadeUp 0.9s ease-out forwards;
+}

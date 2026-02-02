@@ -1,0 +1,27 @@
+.section {
+  padding: 80px 60px;
+}
+
+/* ABOUT */
+.about {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-img {
+  width: 220px;
+  border-radius: 16px;
+}
+
+/* CONTACT UNIQUE */
+.contact-box {
+  background: #f1f5f9;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 400px;
+}
+
+.dark .contact-box {
+  background: #020617;
+}
