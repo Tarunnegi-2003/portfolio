@@ -1,5 +1,15 @@
-html {
-  scroll-behavior: smooth;
+/* ===== GLOBAL MOBILE FIX ===== */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
 }
 
 .reveal {
